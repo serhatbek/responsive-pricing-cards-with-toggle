@@ -1,0 +1,111 @@
+.pricing {
+  width: 80%;
+  height: 68rem;
+  text-align: center;
+  box-shadow: 0 6px 16px 3px rgba(0, 0, 0, 0.4);
+  padding: 6rem 0;
+  border-radius: 1rem;
+  background-image: url(/src/assets/images/bg-bottom.svg);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: 30rem;
+  background-color: #f7f7ff;
+
+  &-heading {
+    font-size: 2.6rem;
+    margin-bottom: 4rem;
+  }
+
+  &-toggle {
+    font-size: 1.4rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+
+    label {
+      visibility: hidden;
+      width: 0;
+      display: inline-block;
+    }
+
+    input {
+      appearance: none;
+      width: 4rem;
+      height: 2.4rem;
+      border-radius: 1.6rem;
+      margin: 0 2rem;
+      background: #bbbabd;
+      position: relative;
+      padding: 0.2rem;
+      transition: 0.3s ease-in-out;
+      display: flex;
+      align-items: center;
+
+      &:checked {
+        background: #878ae8;
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        width: 2rem;
+        height: 2.2rem;
+        background: #fff;
+        border-radius: 50%;
+        position: absolute;
+        transition: 0.3s ease-in-out;
+      }
+
+      &:checked::before {
+        left: 1.8rem;
+      }
+    }
+  }
+
+  &-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .pricing-card {
+      width: 30%;
+      padding: 3rem 2rem;
+      background-color: #fff;
+      border-radius: 1rem;
+
+      &__title {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+      }
+
+      &__price {
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+
+        span {
+          font-size: 2.5rem;
+        }
+
+        .price {
+          font-size: 5rem;
+        }
+      }
+
+      &__features {
+        font-size: 1.3rem;
+        font-weight: 700;
+        border-top: 1px solid #bbbabd;
+
+        .pricing-card__feature {
+          padding: 0.6rem 0;
+          border-bottom: 1px solid #bbbabd;
+        }
+      }
+    }
+  }
+}
