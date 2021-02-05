@@ -1,16 +1,23 @@
 .pricing {
   width: 100%;
   max-width: 960px;
-  height: 68rem;
   text-align: center;
   box-shadow: 0 6px 16px 3px rgba(0, 0, 0, 0.4);
-  padding: 6rem 0;
+  padding: 6rem 3rem;
   border-radius: 1rem;
   background-image: url(/src/assets/images/bg-bottom.svg);
   background-repeat: no-repeat;
   background-position-y: bottom;
   background-size: 30rem;
   background-color: #f7f7ff;
+
+  @include media(atMedium) {
+    width: 80%;
+  }
+
+  @include media(atSmall) {
+    width: 100%;
+  }
 
   &-heading {
     font-size: 2.6rem;
@@ -70,12 +77,20 @@
     align-items: center;
     justify-content: center;
 
+    @include media(atMedium) {
+      flex-direction: column;
+    }
+
     .pricing-card {
-      width: 30%;
+      width: 26rem;
       padding: 3rem 2rem;
       background-color: #fff;
       border-radius: 1rem;
       box-shadow: 0 6px 10px -3px rgba(0, 0, 0, 0.4);
+
+      @include media(atMedium) {
+        margin-bottom: 3rem;
+      }
 
       &__title {
         font-size: 1.4rem;
