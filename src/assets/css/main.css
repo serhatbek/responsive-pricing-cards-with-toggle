@@ -17,9 +17,15 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 1.6rem;
   color: #3b3636;
+  line-height: 1.5;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url(/src/assets/images/bg-top.svg);
+  background-repeat: no-repeat;
+  background-size: 550px;
+  background-position: right top;
+  background-color: #201d1d;
 }
 
 ul {
@@ -36,7 +42,8 @@ ul {
 }
 
 .pricing {
-  width: 80%;
+  width: 100%;
+  max-width: 960px;
   height: 68rem;
   text-align: center;
   box-shadow: 0 6px 16px 3px rgba(0, 0, 0, 0.4);
@@ -113,6 +120,7 @@ ul {
   padding: 3rem 2rem;
   background-color: #fff;
   border-radius: 1rem;
+  box-shadow: 0 6px 10px -3px rgba(0, 0, 0, 0.4);
 }
 
 .pricing-cards .pricing-card__title {
@@ -139,10 +147,56 @@ ul {
 .pricing-cards .pricing-card__features {
   font-size: 1.3rem;
   font-weight: 700;
-  border-top: 1px solid #bbbabd;
+  border-top: 1px solid #dcdbdd;
+  margin-bottom: 2.5rem;
 }
 
 .pricing-cards .pricing-card__features .pricing-card__feature {
   padding: 0.6rem 0;
-  border-bottom: 1px solid #bbbabd;
+  border-bottom: 1px solid #dcdbdd;
+}
+
+.pricing-cards .pricing-card__btn {
+  height: 4rem;
+  padding: 1rem 0;
+  background: #878ae8;
+  border-radius: 0.5rem;
+  width: 100%;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  outline: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.pricing-cards .pricing-card__btn:active {
+  background: #f7eeee;
+  border: 1px solid #878ae8;
+  color: #878ae8;
+}
+
+.pricing-cards .btn-middle:active {
+  background: #878ae8;
+  border: 1px solid #f7eeee;
+  color: #f7eeee;
+}
+
+.pricing-cards .card-middle {
+  background: #878ae8;
+  color: #f7eeee;
+  padding: 5rem 2rem;
+}
+
+.pricing-cards .card-middle button {
+  background: #f7eeee;
+  color: #878ae8;
+}
+
+.pricing .annually.is-hidden {
+  display: none;
+}
+
+.pricing .monthly.is-hidden {
+  display: none;
 }
